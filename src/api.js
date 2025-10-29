@@ -14,7 +14,11 @@ export const getApiUrl = () => API_URL;
 // 모든 포스트 조회
 export const getPosts = async () => {
   try {
-    const response = await fetch(`${API_URL}/api/posts`);
+    const response = await fetch(`${API_URL}/api/posts`, {
+      headers: {
+        'ngrok-skip-browser-warning': 'true'
+      }
+    });
     if (!response.ok) {
       throw new Error('포스트를 불러오는데 실패했습니다');
     }
@@ -29,7 +33,11 @@ export const getPosts = async () => {
 // 특정 포스트 조회
 export const getPost = async (id) => {
   try {
-    const response = await fetch(`${API_URL}/api/posts/${id}`);
+    const response = await fetch(`${API_URL}/api/posts/${id}`, {
+      headers: {
+        'ngrok-skip-browser-warning': 'true'
+      }
+    });
     if (!response.ok) {
       throw new Error('포스트를 찾을 수 없습니다');
     }
@@ -48,6 +56,7 @@ export const createPost = async (title, content) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': 'true'
       },
       body: JSON.stringify({ title, content }),
     });
