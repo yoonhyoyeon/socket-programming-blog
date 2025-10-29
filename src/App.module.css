@@ -1,0 +1,176 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2196F3;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: #1976D2;
+}
+
+.serverInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  padding: 6px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.urlDisplay {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.serverInfo:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.serverLabel {
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.serverUrl {
+  color: #2196F3;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.urlInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.urlInput {
+  padding: 4px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  width: 300px;
+  background: white;
+}
+
+.urlInput:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.urlButton {
+  padding: 4px 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.urlButton:hover {
+  background: #f8f9fa;
+  border-color: #2196F3;
+  color: #2196F3;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.footer {
+  background: white;
+  padding: 24px 20px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.footer p {
+  margin: 4px 0;
+  color: #6c757d;
+  font-size: 13px;
+}
+
+.footer p:first-child {
+  font-weight: 500;
+  color: #495057;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .serverInfo {
+    width: 100%;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .urlInput {
+    width: 200px;
+  }
+
+  .serverUrl {
+    max-width: 150px;
+  }
+
+  .main {
+    padding: 20px 10px;
+  }
+
+  .footer {
+    padding: 20px 15px;
+  }
+}
+
